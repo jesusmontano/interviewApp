@@ -11,14 +11,12 @@ const defaultState = {
 
 const reducer = (oldState = defaultState, action) => {
     switch(action.type){
-        case CREATE_PORTFOLIO:
+        case "CREATE_PORTFOLIO":
             return {
                 portfolio: action.portfolio,
             }
-        case DEFAULT:
-            return {
-                oldState
-            }
+        default:
+            return oldState;
     }
 }
 
