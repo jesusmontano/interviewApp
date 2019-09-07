@@ -23,6 +23,7 @@ class RiskQuestionnaire extends React.Component {
     render(){
         return(
             <div>
+                <label>What is your Risk Profile?</label>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" value={this.state.risk} onChange={this.update('risk')}/>
                     <input type="submit" value="Submit"/>
