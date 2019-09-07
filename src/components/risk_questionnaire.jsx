@@ -7,7 +7,6 @@ class RiskQuestionnaire extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = this.props.portfolio;
-        debugger;
     }
 
     handleSubmit(e){
