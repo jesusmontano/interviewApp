@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 class IdealPortfolio extends React.Component {
     constructor(props){
-        debugger;
         super(props);
 
         this.state = this.props.portfolio;
+        debugger;
     }
 
     render(){
