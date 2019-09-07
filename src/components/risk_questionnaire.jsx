@@ -5,26 +5,29 @@ class RiskQuestionnaire extends React.Component {
     constructor(props){
         super(props);
 
-        this.state = this.props.portfolio;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = this.props.portfolio;
+        debugger;
     }
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.createPortfolio(this.state);
+        return this.props.createPortfolio(this.state);
     }
 
-    update(field){
-        return e => {
-            this.setState({[field]: e.target.value})
-        }
+    update(field) {
+        return (e) => {
+            this.setState({ [field]: e.target.value });
+        };
     }
 
     render(){
         return(
             <div>
-                <form onSubmit={this.handleSubmit}></form>
+                <form onSubmit={this.handleSubmit}>
                     <input type="text" value={this.state.risk} onChange={this.update('risk')}/>
+                    <input type="submit" value="Submit"/>
+                </form>
             </div>
         )
     }

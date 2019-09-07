@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    createPortfolio: (portfolio) => dispatch(createPortfolio(portfolio))
+    createPortfolio: portfolio => dispatch(createPortfolio(portfolio))
 });
 
 export default connect(

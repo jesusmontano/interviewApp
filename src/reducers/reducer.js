@@ -1,4 +1,3 @@
-import merge from 'lodash/merge';
 import { CREATE_PORTFOLIO } from '../actions/actions';
 
 const defaultState = {
@@ -15,10 +14,9 @@ const defaultState = {
 const reducer = (oldState = defaultState, action) => {
     switch(action.type){
         case CREATE_PORTFOLIO:
-            // return {
-            //     portfolio: action.portfolio,
-            // }
-            return merge({}, oldState, action.portfolio);
+            return {
+                portfolio: action.portfolio,
+            }
         default:
             return oldState;
     }
