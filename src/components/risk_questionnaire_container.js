@@ -4,7 +4,6 @@ import RiskQuestionnaire from './risk_questionnaire';
 
 const mapStateToProps = (state, ownProps) => ({
     portfolio: state.portfolio,
-    risk: state.risk
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -8,6 +8,7 @@ const defaultState = {
         international_stocks: '',
         gold: '',
         real_estate: '',
+        risk: ''
     },
 };
 
