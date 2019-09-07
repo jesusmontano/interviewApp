@@ -12,7 +12,7 @@ class RiskQuestionnaire extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        return this.props.createPortfolio(this.state);
+        return this.props.createPortfolio(this.state) && this.props.history.push('/ideal');
     }
 
     update(field) {
