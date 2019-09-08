@@ -20,7 +20,7 @@ function App() {
             <Route exact path="/" component={Splash} />
             <Route exact path="/risk" component={RiskQuestionnaireContainer} />
             <Route exact path="/ideal" component={IdealPortfolioContainer} />
-            <Route exact path="/myportfolio" component={PortfolioQuestionnaireContainer} />
+            <Route exact path="/createportfolio" component={PortfolioQuestionnaireContainer} />
           </Switch>
         </HashRouter>
       </Provider>
