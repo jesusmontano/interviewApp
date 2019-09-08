@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import DonutChart from 'react-d3-donut';
 
 class IdealPortfolio extends React.Component {
     constructor(props){
@@ -101,12 +102,43 @@ class IdealPortfolio extends React.Component {
             )
         }
 
+        let data = [
+            {count: Number(portfolios[this.props.portfolio.risk].bonds),
+            color: '#0077B5',
+            name: 'Bonds'
+            },
+            {count: Number(portfolios[this.props.portfolio.risk].gold),
+            color: '#313335',
+            name: 'Gold'
+            },
+            {count: Number(portfolios[this.props.portfolio.risk].international_stocks),
+            color: '#86888A',
+            name: 'International Stocks'
+            },
+            {count: Number(portfolios[this.props.portfolio.risk].real_estate),
+            color: '#CACCCE',
+            name: 'Real Estate'
+            },
+            {count: Number(portfolios[this.props.portfolio.risk].stocks),
+            color: '#00A0DC',
+            name: 'Stocks'
+            },
+        ]
+
         return(
             <div>
                 This is the ideal portfolio with someone with a risk level
                 of  {this.props.portfolio.risk}.
                 <div>
-                    Donut chart goes here...
+                    <DonutChart
+                        innerRadius={70}
+                        outerRadius={100}
+                        transition={true}
+                        svgClass="example1"
+                        pieClass="pie1"
+                        displayTooltip={true}
+                        strokeWidth={3}
+                        data={data} />
                 </div>
                 <ul>
                     <li>
