@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createPortfolio } from '../actions/actions';
-import { PortfolioQuestionnaire } from './portfolio_questionnaire';
+import PortfolioQuestionnaire from './portfolio_questionnaire';
 
 const mapStateToProps = (state, ownProps) => ({
     portfolio: state.portfolio,
