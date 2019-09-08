@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class Transactions extends React.Component{
     constructor(props){
@@ -11,8 +12,50 @@ class Transactions extends React.Component{
     generateTransactions(idealPortfolio){
         const userPortfolio = this.props.portfolio;
 
-        
+        let totalUserDollars = 0;
 
+        for (let category in this.props.portfolio) {
+            if (category === 'risk') continue; 
+            totalUserDollars += Number(this.props.portfolio[category]);
+        }
+
+        for (let category in idealPortfolio) {
+            if (category === 'risk') continue;
+            idealPortfolio[category] = Number(idealPortfolio[category]) * totalUserDollars / 100
+        }
+
+        let surplus_transactions = [];
+
+        let deficit_transctions = [];
+
+        // going through surpluses 
+        for (let category in this.props.portfolio) {
+            if (category === 'risk') continue;
+            let diff = Number(userPortfolio[category]) - Number(idealPortfolio[category]);
+            if (diff > 0) {
+                userPortfolio[category] = Number(idealPortfolio[category]);
+                //or maybe here... actually i think this is good
+                userPortfolio.stocks = Number(userPortfolio.stocks) + diff;
+                if (category !== 'stocks') {
+                    surplus_transactions.push('Move ' + diff + ' from ' + category + ' to stocks.')
+                }
+            }
+        }
+
+        // going through deficits
+        for (let category in this.props.portfolio) {
+            if (category === 'risk') continue;
+            let diff = Number(idealPortfolio[category]) - Number(userPortfolio[category]);
+            if (diff > 0) {
+                userPortfolio[category] = Number(idealPortfolio[category]);
+                userPortfolio.stocks = Number(userPortfolio.stocks) - diff;
+                deficit_transctions.push('Move ' + diff + ' from stocks to ' + category + '.');
+            }
+        }
+
+        let totalTransactions = surplus_transactions.concat(deficit_transctions);
+
+        return totalTransactions;
     }
 
     render(){
@@ -102,11 +145,17 @@ class Transactions extends React.Component{
 
         const suggestions = this.generateTransactions(portfolios[this.props.portfolio.risk]);
 
+        debugger;
         return(
             <div>
                 <label>Make these transactions.</label>
                 <br/>
-                Move 'X' from 'A' to 'B'...
+                <ul>
+                    {suggestions.map((value, index) => {
+                        return <li key={index}>{value}</li>
+                    })}
+                </ul>
+                <Link to='/'>Go Back to Home Page!</Link>
             </div>
         )
     }
