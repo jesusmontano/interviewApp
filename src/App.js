@@ -15,7 +15,7 @@ import store from './store/store'
 function App() {
   return (
     <div>
-      JesusPlan
+      Robotic Investment Advisor Application
       <Provider store={store}>
         <HashRouter>
           <Switch>

@@ -9,6 +9,9 @@ class Transactions extends React.Component{
     }
 
     generateTransactions(idealPortfolio){
+        const userPortfolio = this.props.portfolio;
+
+        
 
     }
 
@@ -96,6 +99,8 @@ class Transactions extends React.Component{
                 stocks: '45'
             },
         }
+
+        const suggestions = this.generateTransactions(portfolios[this.props.portfolio.risk]);
 
         return(
             <div>

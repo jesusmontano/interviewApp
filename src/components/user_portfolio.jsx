@@ -23,19 +23,19 @@ class UserPortfolio extends React.Component {
                 This is your portfolio:
                 <ul>
                     <li>
-                        Bonds: {(this.state.bonds / total) * 100}%
+                        Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${this.state.bonds})
                     </li>
                     <li>
-                        Gold: {(this.state.gold / total) * 100}%
+                        Gold: {Math.trunc(this.state.gold / total * 100)}% (${this.state.gold})
                     </li>
                     <li>
-                        International Stocks: {(this.state.international_stocks / total) * 100}%
+                        International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${this.state.international_stocks})
                     </li>
                     <li>
-                        Real Estate: {(this.state.real_estate / total) * 100}%
+                        Real Estate: {Math.trunc(this.state.real_estate / total * 100)}% (${this.state.real_estate})
                     </li>
                     <li>
-                        Stocks: {(this.state.stocks / total) * 100}%
+                        Stocks: {Math.trunc(this.state.stocks / total * 100)}% (${this.state.stocks})
                     </li>
                 </ul>
                 <Link to="/fix">Fix My Portfolio!</Link>
