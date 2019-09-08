@@ -7,6 +7,7 @@ import RiskQuestionnaireContainer from './components/risk_questionnaire_containe
 import IdealPortfolioContainer from './components/ideal_portfolio_container';
 import PortfolioQuestionnaireContainer from './components/portfolio_questionnaire_container';
 import UserPortfolioContainer from './components/user_portfolio_container';
+import TransactionsContainer from './components/transactions_container';
 import Splash from './components/splash';
 import { Provider } from 'react-redux';
 import store from './store/store'
@@ -23,6 +24,7 @@ function App() {
             <Route exact path="/ideal" component={IdealPortfolioContainer} />
             <Route exact path="/createportfolio" component={PortfolioQuestionnaireContainer} />
             <Route exact path="/myportfolio" component={UserPortfolioContainer} />
+            <Route exact path="/fix" component={TransactionsContainer} />
           </Switch>
         </HashRouter>
       </Provider>

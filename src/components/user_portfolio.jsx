@@ -18,8 +18,6 @@ class UserPortfolio extends React.Component {
             Number(this.state.stocks)
         )
 
-        debugger;
-
         return(
             <div>
                 This is your portfolio:
@@ -40,7 +38,7 @@ class UserPortfolio extends React.Component {
                         Stocks: {(this.state.stocks / total) * 100}%
                     </li>
                 </ul>
-                <Link to="/fix">Show Me How to Fix my Portfolio!</Link>
+                <Link to="/fix">Fix My Portfolio!</Link>
             </div>
         )
     }
