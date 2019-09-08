@@ -15,7 +15,6 @@ class PortfolioQuestionnaire extends React.Component {
 
     update(field) {
         return (e) => {
-            debugger;
             this.setState({ [field]: e.target.value });
         };
     }
