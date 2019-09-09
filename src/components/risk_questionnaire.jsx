@@ -23,10 +23,12 @@ class RiskQuestionnaire extends React.Component {
     render(){
         return(
             <div className="risk-questionnaire">
-                <div>
-                    <label>What is your Risk Profile?</label>
-                    <form onSubmit={this.handleSubmit}>
+                <div className="risk-questionnaire-div">
+                    <label>When it comes to investing, how much risk are you willing to take?</label>
+                    <br/>
+                    <form className="risk-questionnaire-form" onSubmit={this.handleSubmit}>
                         <input type="number" value={this.state.risk} required="required" onChange={this.update('risk')} min="1" max="10"/>
+                        <br/>
                         <input type="submit" value="Submit"/>
                     </form>
                 </div>
