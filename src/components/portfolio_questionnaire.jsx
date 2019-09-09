@@ -24,15 +24,15 @@ class PortfolioQuestionnaire extends React.Component {
             <div>
                 <label>What does your Portfolio Look Like?</label>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="number" required="required" value={this.state.bonds} onChange={this.update('bonds')} min="0" />Bonds
+                    <input type="number" required="required" step="0.01" value={this.state.bonds} onChange={this.update('bonds')} min="0" />Bonds
                     <br/>
-                    <input type="number" required="required" value={this.state.gold} onChange={this.update('gold')} min="0" />Gold
+                    <input type="number" required="required" step="0.01" value={this.state.gold} onChange={this.update('gold')} min="0" />Gold
                     <br/>
-                    <input type="number" required="required" value={this.state.international_stocks} onChange={this.update('international_stocks')} min="0" />International Stocks
+                    <input type="number" required="required" step="0.01" value={this.state.international_stocks} onChange={this.update('international_stocks')} min="0" />International Stocks
                     <br/>
-                    <input type="number" required="required" value={this.state.real_estate} onChange={this.update('real_estate')} min="0" />Real Estate
+                    <input type="number" required="required" step="0.01" value={this.state.real_estate} onChange={this.update('real_estate')} min="0" />Real Estate
                     <br/>
-                    <input type="number" required="required" value={this.state.stocks} onChange={this.update('stocks')} min="0" />Stocks
+                    <input type="number" required="required" step="0.01" value={this.state.stocks} onChange={this.update('stocks')} min="0" />Stocks
                     <br/>
                     <input type="submit" value="Submit" />
                 </form>

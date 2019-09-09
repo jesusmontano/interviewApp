@@ -7,6 +7,8 @@ class UserPortfolio extends React.Component {
         super(props);
 
         this.state = this.props.portfolio;
+
+        debugger;
     }
 
     render(){
@@ -63,19 +65,19 @@ class UserPortfolio extends React.Component {
                 </div>
                 <ul>
                     <li>
-                        Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${this.state.bonds})
+                        Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${Number(this.state.bonds).toFixed(2)})
                     </li>
                     <li>
-                        Gold: {Math.trunc(this.state.gold / total * 100)}% (${this.state.gold})
+                        Gold: {Math.trunc(this.state.gold / total * 100)}% (${Number(this.state.gold).toFixed(2)})
                     </li>
                     <li>
-                        International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${this.state.international_stocks})
+                        International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${Number(this.state.international_stocks).toFixed(2)})
                     </li>
                     <li>
-                        Real Estate: {Math.trunc(this.state.real_estate / total * 100)}% (${this.state.real_estate})
+                        Real Estate: {Math.trunc(this.state.real_estate / total * 100)}% (${Number(this.state.real_estate).toFixed(2)})
                     </li>
                     <li>
-                        Stocks: {Math.trunc(this.state.stocks / total * 100)}% (${this.state.stocks})
+                        Stocks: {Math.trunc(this.state.stocks / total * 100)}% (${Number(this.state.stocks).toFixed(2)})
                     </li>
                 </ul>
                 <Link to="/fix">Fix My Portfolio!</Link>
