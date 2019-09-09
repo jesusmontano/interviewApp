@@ -37,7 +37,7 @@ class Transactions extends React.Component{
                 //or maybe here... actually i think this is good
                 userPortfolio.stocks = Number(userPortfolio.stocks) + diff;
                 if (category !== 'stocks') {
-                    surplus_transactions.push('Move ' + diff + ' from ' + category + ' to stocks.')
+                    surplus_transactions.push('Move ' + diff.toFixed(2) + ' from ' + category + ' to stocks.')
                 }
             }
         }
@@ -49,7 +49,7 @@ class Transactions extends React.Component{
             if (diff > 0) {
                 userPortfolio[category] = Number(idealPortfolio[category]);
                 userPortfolio.stocks = Number(userPortfolio.stocks) - diff;
-                deficit_transctions.push('Move ' + diff + ' from stocks to ' + category + '.');
+                deficit_transctions.push('Move ' + diff.toFixed(2) + ' from stocks to ' + category + '.');
             }
         }
 

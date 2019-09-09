@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import { HashRouter } from 'react-router-dom';
+import Header from './components/header';
 import RiskQuestionnaireContainer from './components/risk_questionnaire_container';
 import IdealPortfolioContainer from './components/ideal_portfolio_container';
 import PortfolioQuestionnaireContainer from './components/portfolio_questionnaire_container';
@@ -15,7 +16,7 @@ import store from './store/store'
 function App() {
   return (
     <div>
-      Robotic Investment Advisor Application
+      <Header/>
       <Provider store={store}>
         <HashRouter>
           <Switch>
