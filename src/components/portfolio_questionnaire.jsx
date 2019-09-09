@@ -5,7 +5,15 @@ class PortfolioQuestionnaire extends React.Component {
         super(props);
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = this.props.portfolio;
+        this.state = {
+            bonds: '',
+            gold: '',
+            international_stocks: '',
+            real_estate: '',
+            risk: this.props.portfolio.risk,
+            stocks: ''
+        }
+
     }
 
     handleSubmit(e) {

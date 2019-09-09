@@ -40,9 +40,18 @@
   font-weight: bolder;
   background-color: #0077B5;
   color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .splash {
-  height: 100%;
-  background-image: url(https://www.brightplan.com/hubfs/img/b2b/hero_texture.png);
+  height: 100vh;
+  background-image: url(https://www.aelmarkhams.co.uk/wp-content/uploads/2017/06/workers-documents.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.get-started {
+  background: #0077B5;
 }

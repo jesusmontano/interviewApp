@@ -5,17 +5,11 @@ const Splash = () => {
 
     return (
         <div className="splash">
-            <Link to='/risk'>Get Started</Link>
+            <div className="get-started">
+                <Link to='/risk'>Get Started</Link>
+            </div>
         </div>
     )
 }
 
 export default Splash;
-
-//style={{
-// backgroundImage: "url(" + "https://www.kiplinger.com/kipimages/pages/15943.jpg" + ")",
-//     backgroundPosition: 'center',
-//         backgroundSize: 'cover',
-//             backgroundRepeat: 'no-repeat'
-//         }}
-
