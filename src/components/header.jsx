@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
 
     return (
-        <div>
+        <div className="header">
             Jesús Montano Capital Advisors
         </div>
     )

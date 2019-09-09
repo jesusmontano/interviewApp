@@ -37,7 +37,7 @@ class Transactions extends React.Component{
                 //or maybe here... actually i think this is good
                 userPortfolio.stocks = Number(userPortfolio.stocks) + diff;
                 if (category !== 'stocks') {
-                    surplus_transactions.push('Move ' + diff.toFixed(2) + ' from ' + category + ' to stocks.')
+                    surplus_transactions.push('Move $' + diff.toFixed(2) + ' from ' + category + ' to stocks.')
                 }
             }
         }
@@ -49,7 +49,7 @@ class Transactions extends React.Component{
             if (diff > 0) {
                 userPortfolio[category] = Number(idealPortfolio[category]);
                 userPortfolio.stocks = Number(userPortfolio.stocks) - diff;
-                deficit_transctions.push('Move ' + diff.toFixed(2) + ' from stocks to ' + category + '.');
+                deficit_transctions.push('Move $' + diff.toFixed(2) + ' from stocks to ' + category + '.');
             }
         }
 
@@ -146,10 +146,10 @@ class Transactions extends React.Component{
         const suggestions = this.generateTransactions(portfolios[this.props.portfolio.risk]);
 
         debugger;
+
         return(
             <div>
-                <label>Make these transactions.</label>
-                <br/>
+                <label>We suggest you make the following transactions to your portfolio.</label>
                 <ul>
                     {suggestions.map((value, index) => {
                         return <li key={index}>{value}</li>

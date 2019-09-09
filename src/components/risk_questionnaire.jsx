@@ -25,7 +25,7 @@ class RiskQuestionnaire extends React.Component {
             <div>
                 <label>What is your Risk Profile?</label>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="number" value={this.state.risk} onChange={this.update('risk')} min="1" max="10"/>
+                    <input type="number" value={this.state.risk} required="required" onChange={this.update('risk')} min="1" max="10"/>
                     <input type="submit" value="Submit"/>
                 </form>
             </div>
