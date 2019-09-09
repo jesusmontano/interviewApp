@@ -6,7 +6,13 @@ const Splash = () => {
     return (
         <div className="splash">
             <div className="get-started">
-                <Link to='/risk'>Get Started</Link>
+                <div>
+                    Shape Your Financial Future!
+                </div>
+                <br/>
+                <button>
+                    <Link to='/risk'>Get Started</Link>
+                </button>
             </div>
         </div>
     )
