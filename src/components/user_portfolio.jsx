@@ -13,6 +13,14 @@ class UserPortfolio extends React.Component {
 
     render(){
 
+        if (this.props.portfolio.risk === '') {
+            return (
+                <div>
+                    {this.props.history.push('/risk')}
+                </div>
+            )
+        }
+
         const total = (
             Number(this.state.bonds) +
             Number(this.state.gold) +

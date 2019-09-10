@@ -8,6 +8,8 @@ class Transactions extends React.Component{
 
         this.state = this.props.portfolio;
         this.generateTransactions = this.generateTransactions.bind(this);
+
+        debugger;
     }
 
     generateTransactions(idealPortfolio){
@@ -67,6 +69,14 @@ class Transactions extends React.Component{
     }
 
     render(){
+
+        if (this.props.portfolio.risk === '') {
+            return (
+                <div>
+                    {this.props.history.push('/risk')};
+                </div>
+            )
+        }
 
         const portfolios = {
             1: {
@@ -213,7 +223,9 @@ class Transactions extends React.Component{
             <div>
                 <label>We suggest you make the following transactions to your portfolio.</label>
                 <div>
-                    This is what your portfolio looks like now:
+                    <label>
+                        This is what your portfolio looks like now:
+                    </label>
                     <div>
                         <br />
                         <DonutChart
@@ -227,8 +239,13 @@ class Transactions extends React.Component{
                             data={data} />
                     </div>
                 </div>
+                <br/>
+
+                
                 <div>
-                    This is what your portfolio looked like:
+                    <label>
+                        This is what your portfolio looked like:
+                    </label>
                     <div>
                         <br />
                         <DonutChart
