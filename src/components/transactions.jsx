@@ -253,7 +253,7 @@ class Transactions extends React.Component{
                             outerRadius={100}
                             transition={true}
                             svgClass="example1"
-                            pieClass="pie1"
+                            pieClass="pie2"
                             displayTooltip={true}
                             strokeWidth={3}
                             data={data2} />
