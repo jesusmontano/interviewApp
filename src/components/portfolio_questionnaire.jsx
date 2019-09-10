@@ -28,6 +28,14 @@ class PortfolioQuestionnaire extends React.Component {
     }
 
     render(){
+        if (!this.props.portfolio.risk) {
+            return (
+                <div>
+                    {this.props.history.push('/risk')}
+                </div>
+            )
+        }
+        
         return(
             <div className="portfolio-questionnaire">
                 <div className="portfolio-questionnaire-div">
