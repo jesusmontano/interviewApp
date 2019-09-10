@@ -97,7 +97,7 @@ class IdealPortfolio extends React.Component {
         if(!this.props.portfolio.risk) {
             return(
                 <div>
-                    <label>Oops! Looks like we don't know your risk profile. <Link to='/risk'>Get started here.</Link></label>
+                    {this.props.history.push('/risk')}                
                 </div>
             )
         }
