@@ -230,82 +230,82 @@ class Transactions extends React.Component{
         return(
             <div>
                 <label>We suggest you make the following transactions to your portfolio.</label>
-                <div>
-                    <label>
-                        This is what your portfolio looks like after the transactions:
-                    </label>
-                    <div>
-                        <br />
-                        <DonutChart
-                            innerRadius={70}
-                            outerRadius={100}
-                            transition={true}
-                            svgClass="example1"
-                            pieClass="pie1"
-                            displayTooltip={true}
-                            strokeWidth={3}
-                            data={data} />
-                    </div>
-                    <ul>
-                        <li>
-                            Bonds: {portfolios[this.props.portfolio.risk].bonds / total * 100}% (${Number(portfolios[this.props.portfolio.risk].bonds)})
-                        </li>
-                        <li>
-                            Gold: {portfolios[this.props.portfolio.risk].gold / total * 100}% (${Number(portfolios[this.props.portfolio.risk].gold)})
-                        </li>
-                        <li>
-                            International Stocks: {portfolios[this.props.portfolio.risk].international_stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].international_stocks)})
-                        </li>
-                        <li>
-                            Real Estate: {portfolios[this.props.portfolio.risk].real_estate / total * 100}% (${Number(portfolios[this.props.portfolio.risk].real_estate)})
-                        </li>
-                        <li>
-                            Stocks: {portfolios[this.props.portfolio.risk].stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].stocks)})
-                        </li>
-                    </ul>
-                </div>
-                <br/>
-
-                
-                <div>
-                    <label>
-                        This is what your portfolio looks like before the transactions:
-                    </label>
-                    <div>
-                        <br />
-                        <DonutChart
-                            innerRadius={70}
-                            outerRadius={100}
-                            transition={true}
-                            svgClass="example1"
-                            pieClass="pie2"
-                            displayTooltip={true}
-                            strokeWidth={3}
-                            data={data2} />
-                    </div>
-                    <ul>
-                        <li>
-                            Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${Number(this.state.bonds).toFixed(2)})
-                        </li>
-                        <li>
-                            Gold: {Math.trunc(this.state.gold / total * 100)}% (${Number(this.state.gold).toFixed(2)})
-                        </li>
-                        <li>
-                            International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${Number(this.state.international_stocks).toFixed(2)})
-                        </li>
-                        <li>
-                            Real Estate: {Math.trunc(this.state.real_estate / total * 100)}% (${Number(this.state.real_estate).toFixed(2)})
-                        </li>
-                        <li>
-                            Stocks: {Math.trunc(this.state.stocks / total * 100)}% (${Number(this.state.stocks).toFixed(2)})
-                        </li>
-                    </ul>
-                </div>
                 <ul>
                     {suggestions.map((value, index) => {
                         return <li key={index}>{value}</li>
                     })}
                 </ul>
+                <div className="portfolio-comparison">
+                    <div className="new-portfolio">
+                        <label>
+                            This is what your portfolio looks like after the transactions:
+                        </label>
+                        <div>
+                            <br />
+                            <DonutChart
+                                innerRadius={70}
+                                outerRadius={100}
+                                transition={true}
+                                svgClass="example1"
+                                pieClass="pie1"
+                                displayTooltip={true}
+                                strokeWidth={3}
+                                data={data} />
+                        </div>
+                        <ul>
+                            <li>
+                                Bonds: {portfolios[this.props.portfolio.risk].bonds / total * 100}% (${Number(portfolios[this.props.portfolio.risk].bonds)})
+                            </li>
+                            <li>
+                                Gold: {portfolios[this.props.portfolio.risk].gold / total * 100}% (${Number(portfolios[this.props.portfolio.risk].gold)})
+                            </li>
+                            <li>
+                                International Stocks: {portfolios[this.props.portfolio.risk].international_stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].international_stocks)})
+                            </li>
+                            <li>
+                                Real Estate: {portfolios[this.props.portfolio.risk].real_estate / total * 100}% (${Number(portfolios[this.props.portfolio.risk].real_estate)})
+                            </li>
+                            <li>
+                                Stocks: {portfolios[this.props.portfolio.risk].stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].stocks)})
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div className="old-portfolio">
+                        <label>
+                            This is what your portfolio looks like before the transactions:
+                        </label>
+                        <div>
+                            <br />
+                            <DonutChart
+                                innerRadius={70}
+                                outerRadius={100}
+                                transition={true}
+                                svgClass="example1"
+                                pieClass="pie2"
+                                displayTooltip={true}
+                                strokeWidth={3}
+                                data={data2} />
+                        </div>
+                        <ul>
+                            <li>
+                                Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${Number(this.state.bonds).toFixed(2)})
+                            </li>
+                            <li>
+                                Gold: {Math.trunc(this.state.gold / total * 100)}% (${Number(this.state.gold).toFixed(2)})
+                            </li>
+                            <li>
+                                International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${Number(this.state.international_stocks).toFixed(2)})
+                            </li>
+                            <li>
+                                Real Estate: {Math.trunc(this.state.real_estate / total * 100)}% (${Number(this.state.real_estate).toFixed(2)})
+                            </li>
+                            <li>
+                                Stocks: {Math.trunc(this.state.stocks / total * 100)}% (${Number(this.state.stocks).toFixed(2)})
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <Link to='/'>Go Back to Home Page!</Link>
             </div>
         )

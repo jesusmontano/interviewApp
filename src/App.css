@@ -173,3 +173,8 @@
   font-size: large;
   border: #0077B5 solid 4px;
 }
+
+.portfolio-comparison {
+  display: flex;
+  justify-content: space-evenly;
+}
