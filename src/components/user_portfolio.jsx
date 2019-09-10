@@ -52,7 +52,8 @@ class UserPortfolio extends React.Component {
         return(
             <div className="user-portfolio">
                 <div className="user-portfolio-div">
-                    This is your portfolio:
+                    <label>This is your portfolio:</label>
+                    <br/>
                     <div>
                         <DonutChart
                             innerRadius={70}

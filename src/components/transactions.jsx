@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import DonutChart from 'react-d3-donut';
 
 class Transactions extends React.Component{
     constructor(props){
@@ -10,13 +11,18 @@ class Transactions extends React.Component{
     }
 
     generateTransactions(idealPortfolio){
-        const userPortfolio = this.props.portfolio;
+        // const userPortfolio = this.props.portfolio;
+        const userPortfolio = Object.assign({}, this.state);
+
+        debugger;
 
         let totalUserDollars = 0;
 
-        for (let category in this.props.portfolio) {
+        // for (let category in this.props.portfolio) {
+        for (let category in userPortfolio) {
             if (category === 'risk') continue; 
-            totalUserDollars += Number(this.props.portfolio[category]);
+            // totalUserDollars += Number(this.props.portfolio[category]);
+            totalUserDollars += Number(userPortfolio[category]);
         }
 
         for (let category in idealPortfolio) {
@@ -29,7 +35,8 @@ class Transactions extends React.Component{
         let deficit_transctions = [];
 
         // going through surpluses 
-        for (let category in this.props.portfolio) {
+        // for (let category in this.props.portfolio) {
+        for (let category in userPortfolio) {
             if (category === 'risk') continue;
             let diff = Number(userPortfolio[category]) - Number(idealPortfolio[category]);
             if (diff > 0) {
@@ -43,7 +50,8 @@ class Transactions extends React.Component{
         }
 
         // going through deficits
-        for (let category in this.props.portfolio) {
+        // for (let category in this.props.portfolio) {
+        for (let category in userPortfolio) {
             if (category === 'risk') continue;
             let diff = Number(idealPortfolio[category]) - Number(userPortfolio[category]);
             if (diff > 0) {
@@ -143,13 +151,97 @@ class Transactions extends React.Component{
             },
         }
 
-        const suggestions = this.generateTransactions(portfolios[this.props.portfolio.risk]);
+        let data = [
+            {
+                count: Number(portfolios[this.props.portfolio.risk].bonds),
+                color: '#0077B5',
+                name: 'Bonds'
+            },
+            {
+                count: Number(portfolios[this.props.portfolio.risk].gold),
+                color: '#313335',
+                name: 'Gold'
+            },
+            {
+                count: Number(portfolios[this.props.portfolio.risk].international_stocks),
+                color: '#86888A',
+                name: 'International Stocks'
+            },
+            {
+                count: Number(portfolios[this.props.portfolio.risk].real_estate),
+                color: '#CACCCE',
+                name: 'Real Estate'
+            },
+            {
+                count: Number(portfolios[this.props.portfolio.risk].stocks),
+                color: '#00A0DC',
+                name: 'Stocks'
+            },
+        ]
 
-        debugger;
+        let data2 = [
+            {
+                count: Number(this.props.portfolio.bonds),
+                color: '#0077B5',
+                name: 'Bonds'
+            },
+            {
+                count: Number(this.props.portfolio.gold),
+                color: '#313335',
+                name: 'Gold'
+            },
+            {
+                count: Number(this.props.portfolio.international_stocks),
+                color: '#86888A',
+                name: 'International Stocks'
+            },
+            {
+                count: Number(this.props.portfolio.real_estate),
+                color: '#CACCCE',
+                name: 'Real Estate'
+            },
+            {
+                count: Number(this.props.portfolio.stocks),
+                color: '#00A0DC',
+                name: 'Stocks'
+            },
+        ]
+
+        const suggestions = this.generateTransactions(portfolios[this.props.portfolio.risk]);
 
         return(
             <div>
                 <label>We suggest you make the following transactions to your portfolio.</label>
+                <div>
+                    This is what your portfolio looks like now:
+                    <div>
+                        <br />
+                        <DonutChart
+                            innerRadius={70}
+                            outerRadius={100}
+                            transition={true}
+                            svgClass="example1"
+                            pieClass="pie1"
+                            displayTooltip={true}
+                            strokeWidth={3}
+                            data={data} />
+                    </div>
+                </div>
+                <div>
+                    This is what your portfolio looked like:
+                    <div>
+                        <br />
+                        <DonutChart
+                            innerRadius={70}
+                            outerRadius={100}
+                            transition={true}
+                            svgClass="example1"
+                            pieClass="pie1"
+                            displayTooltip={true}
+                            strokeWidth={3}
+                            data={data2} />
+                    </div>
+                </div>
                 <ul>
                     {suggestions.map((value, index) => {
                         return <li key={index}>{value}</li>
