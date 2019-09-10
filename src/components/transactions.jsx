@@ -8,15 +8,11 @@ class Transactions extends React.Component{
 
         this.state = this.props.portfolio;
         this.generateTransactions = this.generateTransactions.bind(this);
-
-        debugger;
     }
 
     generateTransactions(idealPortfolio){
         // const userPortfolio = this.props.portfolio;
         const userPortfolio = Object.assign({}, this.state);
-
-        debugger;
 
         let totalUserDollars = 0;
 
@@ -86,7 +82,7 @@ class Transactions extends React.Component{
             Number(this.state.stocks)
         )
 
-        const portfolios = {
+        let portfolios = {
             1: {
                 bonds: '80',
                 gold: '15',
@@ -171,27 +167,27 @@ class Transactions extends React.Component{
 
         let data = [
             {
-                count: Number(portfolios[this.props.portfolio.risk].bonds) / 100 * total,
+                count: Number(Number(portfolios[this.props.portfolio.risk].bonds) / 100 * total),
                 color: '#0077B5',
                 name: 'Bonds'
             },
             {
-                count: Number(portfolios[this.props.portfolio.risk].gold) / 100 * total,
+                count: Number(Number(portfolios[this.props.portfolio.risk].gold) / 100 * total),
                 color: '#313335',
                 name: 'Gold'
             },
             {
-                count: Number(portfolios[this.props.portfolio.risk].international_stocks) / 100 * total,
+                count: Number(Number(portfolios[this.props.portfolio.risk].international_stocks) / 100 * total),
                 color: '#86888A',
                 name: 'International Stocks'
             },
             {
-                count: Number(portfolios[this.props.portfolio.risk].real_estate) / 100 * total,
+                count: Number(Number(portfolios[this.props.portfolio.risk].real_estate) / 100 * total),
                 color: '#CACCCE',
                 name: 'Real Estate'
             },
             {
-                count: Number(portfolios[this.props.portfolio.risk].stocks) / 100 * total,
+                count: Number(Number(portfolios[this.props.portfolio.risk].stocks) / 100 * total),
                 color: '#00A0DC',
                 name: 'Stocks'
             },
@@ -199,33 +195,37 @@ class Transactions extends React.Component{
 
         let data2 = [
             {
-                count: Number(this.props.portfolio.bonds).toFixed(2),
+                count: Number(Number(this.props.portfolio.bonds).toFixed(2)),
                 color: '#0077B5',
                 name: 'Bonds'
             },
             {
-                count: Number(this.props.portfolio.gold).toFixed(2),
+                count: Number(Number(this.props.portfolio.gold).toFixed(2)),
                 color: '#313335',
                 name: 'Gold'
             },
             {
-                count: Number(this.props.portfolio.international_stocks).toFixed(2),
+                count: Number(Number(this.props.portfolio.international_stocks).toFixed(2)),
                 color: '#86888A',
                 name: 'International Stocks'
             },
             {
-                count: Number(this.props.portfolio.real_estate).toFixed(2),
+                count: Number(Number(this.props.portfolio.real_estate).toFixed(2)),
                 color: '#CACCCE',
                 name: 'Real Estate'
             },
             {
-                count: Number(this.props.portfolio.stocks).toFixed(2),
+                count: Number(Number(this.props.portfolio.stocks).toFixed(2)),
                 color: '#00A0DC',
                 name: 'Stocks'
             },
         ]
 
+        debugger;
+
         const suggestions = this.generateTransactions(portfolios[this.props.portfolio.risk]);
+
+        debugger;
 
         return(
             <div>
@@ -246,6 +246,23 @@ class Transactions extends React.Component{
                             strokeWidth={3}
                             data={data} />
                     </div>
+                    <ul>
+                        <li>
+                            Bonds: {portfolios[this.props.portfolio.risk].bonds / total * 100}% (${Number(portfolios[this.props.portfolio.risk].bonds)})
+                        </li>
+                        <li>
+                            Gold: {portfolios[this.props.portfolio.risk].gold / total * 100}% (${Number(portfolios[this.props.portfolio.risk].gold)})
+                        </li>
+                        <li>
+                            International Stocks: {portfolios[this.props.portfolio.risk].international_stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].international_stocks)})
+                        </li>
+                        <li>
+                            Real Estate: {portfolios[this.props.portfolio.risk].real_estate / total * 100}% (${Number(portfolios[this.props.portfolio.risk].real_estate)})
+                        </li>
+                        <li>
+                            Stocks: {portfolios[this.props.portfolio.risk].stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].stocks)})
+                        </li>
+                    </ul>
                 </div>
                 <br/>
 
