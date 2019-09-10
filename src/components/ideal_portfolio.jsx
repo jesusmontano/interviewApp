@@ -103,23 +103,23 @@ class IdealPortfolio extends React.Component {
         }
 
         let data = [
-            {count: Number(portfolios[this.props.portfolio.risk].bonds),
+            {count: Number(portfolios[this.props.portfolio.risk].bonds).toFixed(2),
             color: '#0077B5',
             name: 'Bonds'
             },
-            {count: Number(portfolios[this.props.portfolio.risk].gold),
+            {count: Number(portfolios[this.props.portfolio.risk].gold).toFixed(2),
             color: '#313335',
             name: 'Gold'
             },
-            {count: Number(portfolios[this.props.portfolio.risk].international_stocks),
+            {count: Number(portfolios[this.props.portfolio.risk].international_stocks).toFixed(2),
             color: '#86888A',
             name: 'International Stocks'
             },
-            {count: Number(portfolios[this.props.portfolio.risk].real_estate),
+            {count: Number(portfolios[this.props.portfolio.risk].real_estate).toFixed(2),
             color: '#CACCCE',
             name: 'Real Estate'
             },
-            {count: Number(portfolios[this.props.portfolio.risk].stocks),
+            {count: Number(portfolios[this.props.portfolio.risk].stocks).toFixed(2),
             color: '#00A0DC',
             name: 'Stocks'
             },

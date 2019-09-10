@@ -78,6 +78,14 @@ class Transactions extends React.Component{
             )
         }
 
+        const total = (
+            Number(this.state.bonds) +
+            Number(this.state.gold) +
+            Number(this.state.international_stocks) +
+            Number(this.state.real_estate) +
+            Number(this.state.stocks)
+        )
+
         const portfolios = {
             1: {
                 bonds: '80',
@@ -163,27 +171,27 @@ class Transactions extends React.Component{
 
         let data = [
             {
-                count: Number(portfolios[this.props.portfolio.risk].bonds),
+                count: Number(portfolios[this.props.portfolio.risk].bonds) / 100 * total,
                 color: '#0077B5',
                 name: 'Bonds'
             },
             {
-                count: Number(portfolios[this.props.portfolio.risk].gold),
+                count: Number(portfolios[this.props.portfolio.risk].gold) / 100 * total,
                 color: '#313335',
                 name: 'Gold'
             },
             {
-                count: Number(portfolios[this.props.portfolio.risk].international_stocks),
+                count: Number(portfolios[this.props.portfolio.risk].international_stocks) / 100 * total,
                 color: '#86888A',
                 name: 'International Stocks'
             },
             {
-                count: Number(portfolios[this.props.portfolio.risk].real_estate),
+                count: Number(portfolios[this.props.portfolio.risk].real_estate) / 100 * total,
                 color: '#CACCCE',
                 name: 'Real Estate'
             },
             {
-                count: Number(portfolios[this.props.portfolio.risk].stocks),
+                count: Number(portfolios[this.props.portfolio.risk].stocks) / 100 * total,
                 color: '#00A0DC',
                 name: 'Stocks'
             },
@@ -191,27 +199,27 @@ class Transactions extends React.Component{
 
         let data2 = [
             {
-                count: Number(this.props.portfolio.bonds),
+                count: Number(this.props.portfolio.bonds).toFixed(2),
                 color: '#0077B5',
                 name: 'Bonds'
             },
             {
-                count: Number(this.props.portfolio.gold),
+                count: Number(this.props.portfolio.gold).toFixed(2),
                 color: '#313335',
                 name: 'Gold'
             },
             {
-                count: Number(this.props.portfolio.international_stocks),
+                count: Number(this.props.portfolio.international_stocks).toFixed(2),
                 color: '#86888A',
                 name: 'International Stocks'
             },
             {
-                count: Number(this.props.portfolio.real_estate),
+                count: Number(this.props.portfolio.real_estate).toFixed(2),
                 color: '#CACCCE',
                 name: 'Real Estate'
             },
             {
-                count: Number(this.props.portfolio.stocks),
+                count: Number(this.props.portfolio.stocks).toFixed(2),
                 color: '#00A0DC',
                 name: 'Stocks'
             },
@@ -224,7 +232,7 @@ class Transactions extends React.Component{
                 <label>We suggest you make the following transactions to your portfolio.</label>
                 <div>
                     <label>
-                        This is what your portfolio looks like now:
+                        This is what your portfolio looks like after the transactions:
                     </label>
                     <div>
                         <br />
@@ -244,7 +252,7 @@ class Transactions extends React.Component{
                 
                 <div>
                     <label>
-                        This is what your portfolio looked like:
+                        This is what your portfolio looks like before the transactions:
                     </label>
                     <div>
                         <br />
@@ -258,6 +266,23 @@ class Transactions extends React.Component{
                             strokeWidth={3}
                             data={data2} />
                     </div>
+                    <ul>
+                        <li>
+                            Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${Number(this.state.bonds).toFixed(2)})
+                        </li>
+                        <li>
+                            Gold: {Math.trunc(this.state.gold / total * 100)}% (${Number(this.state.gold).toFixed(2)})
+                        </li>
+                        <li>
+                            International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${Number(this.state.international_stocks).toFixed(2)})
+                        </li>
+                        <li>
+                            Real Estate: {Math.trunc(this.state.real_estate / total * 100)}% (${Number(this.state.real_estate).toFixed(2)})
+                        </li>
+                        <li>
+                            Stocks: {Math.trunc(this.state.stocks / total * 100)}% (${Number(this.state.stocks).toFixed(2)})
+                        </li>
+                    </ul>
                 </div>
                 <ul>
                     {suggestions.map((value, index) => {

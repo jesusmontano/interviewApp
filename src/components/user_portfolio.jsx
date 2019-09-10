@@ -31,27 +31,27 @@ class UserPortfolio extends React.Component {
 
         let data = [
             {
-                count: Number(this.props.portfolio.bonds),
+                count: Number(this.props.portfolio.bonds).toFixed(2),
                 color: '#0077B5',
                 name: 'Bonds'
             },
             {
-                count: Number(this.props.portfolio.gold),
+                count: Number(this.props.portfolio.gold).toFixed(2),
                 color: '#313335',
                 name: 'Gold'
             },
             {
-                count: Number(this.props.portfolio.international_stocks),
+                count: Number(this.props.portfolio.international_stocks).toFixed(2),
                 color: '#86888A',
                 name: 'International Stocks'
             },
             {
-                count: Number(this.props.portfolio.real_estate),
+                count: Number(this.props.portfolio.real_estate).toFixed(2),
                 color: '#CACCCE',
                 name: 'Real Estate'
             },
             {
-                count: Number(this.props.portfolio.stocks),
+                count: Number(this.props.portfolio.stocks).toFixed(2),
                 color: '#00A0DC',
                 name: 'Stocks'
             },
