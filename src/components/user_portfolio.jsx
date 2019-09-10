@@ -50,37 +50,39 @@ class UserPortfolio extends React.Component {
         ]
 
         return(
-            <div>
-                This is your portfolio:
-                <div>
-                    <DonutChart
-                        innerRadius={70}
-                        outerRadius={100}
-                        transition={true}
-                        svgClass="example1"
-                        pieClass="pie1"
-                        displayTooltip={true}
-                        strokeWidth={3}
-                        data={data} />
+            <div className="user-portfolio">
+                <div className="user-portfolio-div">
+                    This is your portfolio:
+                    <div>
+                        <DonutChart
+                            innerRadius={70}
+                            outerRadius={100}
+                            transition={true}
+                            svgClass="example1"
+                            pieClass="pie1"
+                            displayTooltip={true}
+                            strokeWidth={3}
+                            data={data} />
+                    </div>
+                    <ul>
+                        <li>
+                            Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${Number(this.state.bonds).toFixed(2)})
+                        </li>
+                        <li>
+                            Gold: {Math.trunc(this.state.gold / total * 100)}% (${Number(this.state.gold).toFixed(2)})
+                        </li>
+                        <li>
+                            International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${Number(this.state.international_stocks).toFixed(2)})
+                        </li>
+                        <li>
+                            Real Estate: {Math.trunc(this.state.real_estate / total * 100)}% (${Number(this.state.real_estate).toFixed(2)})
+                        </li>
+                        <li>
+                            Stocks: {Math.trunc(this.state.stocks / total * 100)}% (${Number(this.state.stocks).toFixed(2)})
+                        </li>
+                    </ul>
+                    <Link to="/fix">Fix My Portfolio!</Link>
                 </div>
-                <ul>
-                    <li>
-                        Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${Number(this.state.bonds).toFixed(2)})
-                    </li>
-                    <li>
-                        Gold: {Math.trunc(this.state.gold / total * 100)}% (${Number(this.state.gold).toFixed(2)})
-                    </li>
-                    <li>
-                        International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${Number(this.state.international_stocks).toFixed(2)})
-                    </li>
-                    <li>
-                        Real Estate: {Math.trunc(this.state.real_estate / total * 100)}% (${Number(this.state.real_estate).toFixed(2)})
-                    </li>
-                    <li>
-                        Stocks: {Math.trunc(this.state.stocks / total * 100)}% (${Number(this.state.stocks).toFixed(2)})
-                    </li>
-                </ul>
-                <Link to="/fix">Fix My Portfolio!</Link>
             </div>
         )
     }
