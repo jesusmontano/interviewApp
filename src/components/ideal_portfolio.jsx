@@ -126,38 +126,41 @@ class IdealPortfolio extends React.Component {
         ]
 
         return(
-            <div>
-                This is the ideal portfolio with someone with a risk level
-                of  {this.props.portfolio.risk}.
-                <div>
-                    <DonutChart
-                        innerRadius={70}
-                        outerRadius={100}
-                        transition={true}
-                        svgClass="example1"
-                        pieClass="pie1"
-                        displayTooltip={true}
-                        strokeWidth={3}
-                        data={data} />
+            <div className="ideal-portfolio">
+                <div className="ideal-portfolio-div">
+                    This is the ideal portfolio based on your williningess to take risk.
+                    <br/>
+                    <div>
+                        <br/>
+                        <DonutChart
+                            innerRadius={70}
+                            outerRadius={100}
+                            transition={true}
+                            svgClass="example1"
+                            pieClass="pie1"
+                            displayTooltip={true}
+                            strokeWidth={3}
+                            data={data} />
+                    </div>
+                    <ul>
+                        <li>
+                            Bonds: {portfolios[this.props.portfolio.risk].bonds}%
+                        </li>
+                        <li>
+                            Gold: {portfolios[this.props.portfolio.risk].gold}%
+                        </li>
+                        <li>
+                            International Stocks: {portfolios[this.props.portfolio.risk].international_stocks}%
+                        </li>
+                        <li>
+                            Real Estate: {portfolios[this.props.portfolio.risk].real_estate}%
+                        </li>
+                        <li>
+                            Stocks: {portfolios[this.props.portfolio.risk].stocks}%
+                        </li>
+                    </ul>
+                    <Link to="/createportfolio">Fix My Portfolio!</Link>
                 </div>
-                <ul>
-                    <li>
-                        Bonds: {portfolios[this.props.portfolio.risk].bonds}%
-                    </li>
-                    <li>
-                        Gold: {portfolios[this.props.portfolio.risk].gold}%
-                    </li>
-                    <li>
-                        International Stocks: {portfolios[this.props.portfolio.risk].international_stocks}%
-                    </li>
-                    <li>
-                        Real Estate: {portfolios[this.props.portfolio.risk].real_estate}%
-                    </li>
-                    <li>
-                        Stocks: {portfolios[this.props.portfolio.risk].stocks}%
-                    </li>
-                </ul>
-                <Link to="/createportfolio">Fix My Portfolio!</Link>
             </div>
         )
     }
