@@ -38,7 +38,13 @@ class Transactions extends React.Component{
                 //or maybe here... actually i think this is good
                 userPortfolio.stocks = Number(userPortfolio.stocks) + diff;
                 if (category !== 'stocks') {
-                    surplus_transactions.push('Move $' + diff.toFixed(2) + ' from ' + category + ' to stocks.')
+                    if (category === 'real_estate') {
+                        surplus_transactions.push('Move $' + diff.toFixed(2) + ' from real estate to stocks.')
+                    } else if (category === 'international_stocks') {
+                        surplus_transactions.push('Move $' + diff.toFixed(2) + ' from international stocks to stocks.')
+                    } else {
+                        surplus_transactions.push('Move $' + diff.toFixed(2) + ' from ' + category + ' to stocks.')
+                    }
                 }
             }
         }
@@ -51,7 +57,13 @@ class Transactions extends React.Component{
                 userPortfolio[category] = Number(idealPortfolio[category]);
                 userPortfolio.stocks = Number(userPortfolio.stocks) - diff;
                 if (category !== 'stocks') {
-                    deficit_transctions.push('Move $' + diff.toFixed(2) + ' from stocks to ' + category + '.');
+                    if (category === 'real_estate') {
+                        deficit_transctions.push('Move $' + diff.toFixed(2) + ' from stocks to real estate.');
+                    } else if (category === 'international_stocks') {
+                        deficit_transctions.push('Move $' + diff.toFixed(2) + ' from stocks to international stocks.');
+                    } else {
+                        deficit_transctions.push('Move $' + diff.toFixed(2) + ' from stocks to ' + category + '.');
+                    }
                 }
             }
         }
