@@ -30,7 +30,7 @@ class RiskQuestionnaire extends React.Component {
                     <label>Larger numbers represent a higher willingness to take risk.</label>
                     <br/>
                     <form className="risk-questionnaire-form" onSubmit={this.handleSubmit}>
-                        <input type="number" value={this.state.risk} required="required" onChange={this.update('risk')} min="1" max="10" placeholder="Enter a number from 1 to 10."/>
+                        <input type="number" value={this.state.risk} required="required" onChange={this.update('risk')} min="1" max="10"/>
                         <br/>
                         <input type="submit" value="Submit"/>
                     </form>

@@ -41,7 +41,7 @@ class PortfolioQuestionnaire extends React.Component {
                 <div className="portfolio-questionnaire-div">
                     <label>What does your portfolio look like?</label>
                     <br/>
-                    <form onSubmit={this.handleSubmit}>
+                    <form className="portfolio-questionnaire-form" onSubmit={this.handleSubmit}>
                         <div className="category">
                             <label>Bonds:</label>
                             <input type="number" required="required" step="0.01" value={this.state.bonds} onChange={this.update('bonds')} min="0" placeholder="Enter dollar amount."/>

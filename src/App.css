@@ -79,8 +79,8 @@
 
 .risk-questionnaire-div {
   background: rgb(255, 255, 255);
-  height: 40vh;
-  width: 50%;
+  min-height: 40vh;
+  min-width: 50%;
   border-radius: .75rem;
   display: flex;
   flex-direction: column;
@@ -202,4 +202,9 @@
   display: flex;
   justify-content: center;
   align-items: center
+}
+
+.portfolio-questionnaire-form {
+  display: flex;
+  flex-direction: column;
 }

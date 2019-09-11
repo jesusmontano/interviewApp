@@ -176,27 +176,27 @@ class Transactions extends React.Component{
 
         let data = [
             {
-                count: Number(Number(portfolios[this.props.portfolio.risk].bonds) / 100 * total),
+                count: Math.round(Number(Number(portfolios[this.props.portfolio.risk].bonds) / 100 * total)),
                 color: '#0077B5',
                 name: 'Bonds'
             },
             {
-                count: Number(Number(portfolios[this.props.portfolio.risk].cash) / 100 * total),
+                count: Math.round(Number(Number(portfolios[this.props.portfolio.risk].cash) / 100 * total)),
                 color: '#313335',
                 name: 'Cash'
             },
             {
-                count: Number(Number(portfolios[this.props.portfolio.risk].international_stocks) / 100 * total),
+                count: Math.round(Number(Number(portfolios[this.props.portfolio.risk].international_stocks) / 100 * total)),
                 color: '#86888A',
                 name: 'International Stocks'
             },
             {
-                count: Number(Number(portfolios[this.props.portfolio.risk].real_estate) / 100 * total),
+                count: Math.round(Number(Number(portfolios[this.props.portfolio.risk].real_estate) / 100 * total)),
                 color: '#CACCCE',
                 name: 'Real Estate'
             },
             {
-                count: Number(Number(portfolios[this.props.portfolio.risk].stocks) / 100 * total),
+                count: Math.round(Number(Number(portfolios[this.props.portfolio.risk].stocks) / 100 * total)),
                 color: '#00A0DC',
                 name: 'Stocks'
             },
@@ -300,19 +300,19 @@ class Transactions extends React.Component{
                             </div>
                             <ul>
                                 <li>
-                                    Bonds: {Math.trunc(portfolios[this.props.portfolio.risk].bonds / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].bonds).toFixed(2)})
+                                    Bonds: {Math.round(portfolios[this.props.portfolio.risk].bonds / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].bonds).toFixed(2)})
                                 </li>
                                 <li>
-                                    Cash: {Math.trunc(portfolios[this.props.portfolio.risk].cash / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].cash).toFixed(2)})
+                                    Cash: {Math.round(portfolios[this.props.portfolio.risk].cash / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].cash).toFixed(2)})
                                 </li>
                                 <li>
-                                    International Stocks: {Math.trunc(portfolios[this.props.portfolio.risk].international_stocks / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].international_stocks).toFixed(2)})
+                                    International Stocks: {Math.round(portfolios[this.props.portfolio.risk].international_stocks / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].international_stocks).toFixed(2)})
                                 </li>
                                 <li>
-                                    Real Estate: {Math.trunc(portfolios[this.props.portfolio.risk].real_estate / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].real_estate).toFixed(2)})
+                                    Real Estate: {Math.round(portfolios[this.props.portfolio.risk].real_estate / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].real_estate).toFixed(2)})
                                 </li>
                                 <li>
-                                    Stocks: {Math.trunc(portfolios[this.props.portfolio.risk].stocks / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].stocks).toFixed(2)})
+                                    Stocks: {Math.round(portfolios[this.props.portfolio.risk].stocks / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].stocks).toFixed(2)})
                                 </li>
                             </ul>
                         </div>
