@@ -88,8 +88,8 @@ class UserPortfolio extends React.Component {
                             Stocks: {Math.trunc(this.state.stocks / total * 100)}% (${Number(this.state.stocks).toFixed(2)})
                         </li>
                     </ul>
-                    <button>
-                        <Link to="/fix" style={{ textDecoration: 'none', color: 'black' }}>Fix My Portfolio!</Link>
+                    <button className="submit-button">
+                        <Link to="/fix" style={{ textDecoration: 'none', color: 'white' }}>Fix My Portfolio!</Link>
                     </button>
                 </div>
             </div>

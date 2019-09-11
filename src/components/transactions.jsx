@@ -318,8 +318,8 @@ class Transactions extends React.Component{
                         </div>
                         
                     </div>
-                    <button>
-                        <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>Go back to home page!</Link>
+                    <button className="submit-button">
+                        <Link to='/' style={{ textDecoration: 'none', color: 'white' }}>Go back to home page!</Link>
                     </button>
                     <br/>
                 </div>

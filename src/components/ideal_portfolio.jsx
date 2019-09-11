@@ -159,8 +159,8 @@ class IdealPortfolio extends React.Component {
                             Stocks: {portfolios[this.props.portfolio.risk].stocks}%
                         </li>
                     </ul>
-                    <button>
-                        <Link to="/createportfolio" style={{ textDecoration: 'none', color: 'black' }}>Fix My Portfolio!</Link>
+                    <button className="submit-button">
+                        <Link to="/createportfolio" style={{ textDecoration: 'none', color: 'white' }}>Fix My Portfolio!</Link>
                     </button>
                 </div>
             </div>

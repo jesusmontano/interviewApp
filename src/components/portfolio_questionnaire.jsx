@@ -67,7 +67,7 @@ class PortfolioQuestionnaire extends React.Component {
                             <input type="number" required="required" step="0.01" value={this.state.stocks} onChange={this.update('stocks')} min="0" placeholder="Enter dollar amount."/>
                         </div>
                         <br/>
-                        <input type="submit" value="Submit" />
+                        <input className="submit-button" type="submit" value="Submit" />
                     </form>
                 </div>
             </div>

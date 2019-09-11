@@ -32,7 +32,7 @@ class RiskQuestionnaire extends React.Component {
                     <form className="risk-questionnaire-form" onSubmit={this.handleSubmit}>
                         <input type="number" value={this.state.risk} required="required" onChange={this.update('risk')} min="1" max="10"/>
                         <br/>
-                        <input type="submit" value="Submit"/>
+                        <input type="submit" className="submit-button" value="Submit"/>
                     </form>
                 </div>
             </div>
