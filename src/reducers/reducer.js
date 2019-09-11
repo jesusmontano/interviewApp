@@ -5,7 +5,7 @@ const defaultState = {
         bonds: '',
         stocks: '',
         international_stocks: '',
-        gold: '',
+        cash: '',
         real_estate: '',
         risk: ''
     },

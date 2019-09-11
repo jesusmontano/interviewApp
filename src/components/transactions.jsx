@@ -85,7 +85,7 @@ class Transactions extends React.Component{
 
         const total = (
             Number(this.state.bonds) +
-            Number(this.state.gold) +
+            Number(this.state.cash) +
             Number(this.state.international_stocks) +
             Number(this.state.real_estate) +
             Number(this.state.stocks)
@@ -94,7 +94,7 @@ class Transactions extends React.Component{
         let portfolios = {
             1: {
                 bonds: '80',
-                gold: '15',
+                cash: '15',
                 international_stocks: '0',
                 real_estate: '0',
                 risk: '1',
@@ -102,7 +102,7 @@ class Transactions extends React.Component{
             },
             2: {
                 bonds: '75',
-                gold: '15',
+                cash: '15',
                 international_stocks: '0',
                 real_estate: '0',
                 risk: '2',
@@ -110,7 +110,7 @@ class Transactions extends React.Component{
             },
             3: {
                 bonds: '65',
-                gold: '5',
+                cash: '5',
                 international_stocks: '0',
                 real_estate: '15',
                 risk: '3',
@@ -118,7 +118,7 @@ class Transactions extends React.Component{
             },
             4: {
                 bonds: '45',
-                gold: '10',
+                cash: '10',
                 international_stocks: '5',
                 real_estate: '20',
                 risk: '4',
@@ -126,7 +126,7 @@ class Transactions extends React.Component{
             },
             5: {
                 bonds: '40',
-                gold: '10',
+                cash: '10',
                 international_stocks: '0',
                 real_estate: '20',
                 risk: '5',
@@ -134,7 +134,7 @@ class Transactions extends React.Component{
             },
             6: {
                 bonds: '30',
-                gold: '15',
+                cash: '15',
                 international_stocks: '5',
                 real_estate: '10',
                 risk: '6',
@@ -142,7 +142,7 @@ class Transactions extends React.Component{
             },
             7: {
                 bonds: '15',
-                gold: '5',
+                cash: '5',
                 international_stocks: '20',
                 real_estate: '10',
                 risk: '7',
@@ -150,7 +150,7 @@ class Transactions extends React.Component{
             },
             8: {
                 bonds: '5',
-                gold: '5',
+                cash: '5',
                 international_stocks: '25',
                 real_estate: '15',
                 risk: '8',
@@ -158,7 +158,7 @@ class Transactions extends React.Component{
             },
             9: {
                 bonds: '0',
-                gold: '0',
+                cash: '0',
                 international_stocks: '25',
                 real_estate: '25',
                 risk: '9',
@@ -166,7 +166,7 @@ class Transactions extends React.Component{
             },
             10: {
                 bonds: '5',
-                gold: '0',
+                cash: '0',
                 international_stocks: '30',
                 real_estate: '20',
                 risk: '10',
@@ -181,9 +181,9 @@ class Transactions extends React.Component{
                 name: 'Bonds'
             },
             {
-                count: Number(Number(portfolios[this.props.portfolio.risk].gold) / 100 * total),
+                count: Number(Number(portfolios[this.props.portfolio.risk].cash) / 100 * total),
                 color: '#313335',
-                name: 'Gold'
+                name: 'Cash'
             },
             {
                 count: Number(Number(portfolios[this.props.portfolio.risk].international_stocks) / 100 * total),
@@ -209,9 +209,9 @@ class Transactions extends React.Component{
                 name: 'Bonds'
             },
             {
-                count: Number(Number(this.props.portfolio.gold).toFixed(2)),
+                count: Number(Number(this.props.portfolio.cash).toFixed(2)),
                 color: '#313335',
-                name: 'Gold'
+                name: 'Cash'
             },
             {
                 count: Number(Number(this.props.portfolio.international_stocks).toFixed(2)),
@@ -272,7 +272,7 @@ class Transactions extends React.Component{
                                     Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${Number(this.state.bonds).toFixed(2)})
                                 </li>
                                 <li>
-                                    Gold: {Math.trunc(this.state.gold / total * 100)}% (${Number(this.state.gold).toFixed(2)})
+                                    Cash: {Math.trunc(this.state.cash / total * 100)}% (${Number(this.state.cash).toFixed(2)})
                                 </li>
                                 <li>
                                     International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${Number(this.state.international_stocks).toFixed(2)})
@@ -307,7 +307,7 @@ class Transactions extends React.Component{
                                     Bonds: {Math.trunc(portfolios[this.props.portfolio.risk].bonds / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].bonds).toFixed(2)})
                                 </li>
                                 <li>
-                                    Gold: {Math.trunc(portfolios[this.props.portfolio.risk].gold / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].gold).toFixed(2)})
+                                    Cash: {Math.trunc(portfolios[this.props.portfolio.risk].cash / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].cash).toFixed(2)})
                                 </li>
                                 <li>
                                     International Stocks: {Math.trunc(portfolios[this.props.portfolio.risk].international_stocks / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].international_stocks).toFixed(2)})

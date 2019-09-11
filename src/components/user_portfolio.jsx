@@ -23,7 +23,7 @@ class UserPortfolio extends React.Component {
 
         const total = (
             Number(this.state.bonds) +
-            Number(this.state.gold) +
+            Number(this.state.cash) +
             Number(this.state.international_stocks) +
             Number(this.state.real_estate) +
             Number(this.state.stocks)
@@ -36,9 +36,9 @@ class UserPortfolio extends React.Component {
                 name: 'Bonds'
             },
             {
-                count: Number(Number(this.props.portfolio.gold).toFixed(2)),
+                count: Number(Number(this.props.portfolio.cash).toFixed(2)),
                 color: '#313335',
-                name: 'Gold'
+                name: 'Cash'
             },
             {
                 count: Number(Number(this.props.portfolio.international_stocks).toFixed(2)),
@@ -78,7 +78,7 @@ class UserPortfolio extends React.Component {
                             Bonds: {Math.trunc(this.state.bonds / total * 100)}% (${Number(this.state.bonds).toFixed(2)})
                         </li>
                         <li>
-                            Gold: {Math.trunc(this.state.gold / total * 100)}% (${Number(this.state.gold).toFixed(2)})
+                            Cash: {Math.trunc(this.state.cash / total * 100)}% (${Number(this.state.cash).toFixed(2)})
                         </li>
                         <li>
                             International Stocks: {Math.trunc(this.state.international_stocks / total * 100)}% (${Number(this.state.international_stocks).toFixed(2)})

@@ -7,7 +7,7 @@ class PortfolioQuestionnaire extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             bonds: '',
-            gold: '',
+            cash: '',
             international_stocks: '',
             real_estate: '',
             risk: this.props.portfolio.risk,
@@ -48,8 +48,8 @@ class PortfolioQuestionnaire extends React.Component {
                         </div>
                         <br/>
                         <div className="category">
-                            <label>Gold:</label>
-                            <input type="number" required="required" step="0.01" value={this.state.gold} onChange={this.update('gold')} min="0" placeholder="Enter dollar amount."/>
+                            <label>Cash:</label>
+                            <input type="number" required="required" step="0.01" value={this.state.cash} onChange={this.update('cash')} min="0" placeholder="Enter dollar amount."/>
                         </div>
                         <br/>
                         <div className="category">

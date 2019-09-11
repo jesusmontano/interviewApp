@@ -14,7 +14,7 @@ class IdealPortfolio extends React.Component {
         const portfolios = {
             1: {
                 bonds: '80',
-                gold: '15',
+                cash: '15',
                 international_stocks: '0',
                 real_estate: '0',
                 risk: '1',
@@ -22,7 +22,7 @@ class IdealPortfolio extends React.Component {
             },
             2: {
                 bonds: '75',
-                gold: '15',
+                cash: '15',
                 international_stocks: '0',
                 real_estate: '0',
                 risk: '2',
@@ -30,7 +30,7 @@ class IdealPortfolio extends React.Component {
             },
             3: {
                 bonds: '65',
-                gold: '5',
+                cash: '5',
                 international_stocks: '0',
                 real_estate: '15',
                 risk: '3',
@@ -38,7 +38,7 @@ class IdealPortfolio extends React.Component {
             },
             4: {
                 bonds: '45',
-                gold: '10',
+                cash: '10',
                 international_stocks: '5',
                 real_estate: '20',
                 risk: '4',
@@ -46,7 +46,7 @@ class IdealPortfolio extends React.Component {
             },
             5: {
                 bonds: '40',
-                gold: '10',
+                cash: '10',
                 international_stocks: '0',
                 real_estate: '20',
                 risk: '5',
@@ -54,7 +54,7 @@ class IdealPortfolio extends React.Component {
             },
             6: {
                 bonds: '30',
-                gold: '15',
+                cash: '15',
                 international_stocks: '5',
                 real_estate: '10',
                 risk: '6',
@@ -62,7 +62,7 @@ class IdealPortfolio extends React.Component {
             },
             7: {
                 bonds: '15',
-                gold: '5',
+                cash: '5',
                 international_stocks: '20',
                 real_estate: '10',
                 risk: '7',
@@ -70,7 +70,7 @@ class IdealPortfolio extends React.Component {
             },
             8: {
                 bonds: '5',
-                gold: '5',
+                cash: '5',
                 international_stocks: '25',
                 real_estate: '15',
                 risk: '8',
@@ -78,7 +78,7 @@ class IdealPortfolio extends React.Component {
             },
             9: {
                 bonds: '0',
-                gold: '0',
+                cash: '0',
                 international_stocks: '25',
                 real_estate: '25',
                 risk: '9',
@@ -86,7 +86,7 @@ class IdealPortfolio extends React.Component {
             },
             10: {
                 bonds: '5',
-                gold: '0',
+                cash: '0',
                 international_stocks: '30',
                 real_estate: '20',
                 risk: '10',
@@ -107,9 +107,9 @@ class IdealPortfolio extends React.Component {
             color: '#0077B5',
             name: 'Bonds'
             },
-            {count: Number(Number(portfolios[this.props.portfolio.risk].gold).toFixed(2)),
+            {count: Number(Number(portfolios[this.props.portfolio.risk].cash).toFixed(2)),
             color: '#313335',
-            name: 'Gold'
+            name: 'Cash'
             },
             {count: Number(Number(portfolios[this.props.portfolio.risk].international_stocks).toFixed(2)),
             color: '#86888A',
@@ -147,7 +147,7 @@ class IdealPortfolio extends React.Component {
                             Bonds: {portfolios[this.props.portfolio.risk].bonds}%
                         </li>
                         <li>
-                            Gold: {portfolios[this.props.portfolio.risk].gold}%
+                            Cash: {portfolios[this.props.portfolio.risk].cash}%
                         </li>
                         <li>
                             International Stocks: {portfolios[this.props.portfolio.risk].international_stocks}%
