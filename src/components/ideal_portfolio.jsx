@@ -159,7 +159,9 @@ class IdealPortfolio extends React.Component {
                             Stocks: {portfolios[this.props.portfolio.risk].stocks}%
                         </li>
                     </ul>
-                    <Link to="/createportfolio">Fix My Portfolio!</Link>
+                    <button>
+                        <Link to="/createportfolio">Fix My Portfolio!</Link>
+                    </button>
                 </div>
             </div>
         )
