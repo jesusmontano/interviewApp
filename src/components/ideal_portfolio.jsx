@@ -64,7 +64,7 @@ class IdealPortfolio extends React.Component {
                 bonds: '15',
                 cash: '5',
                 international_stocks: '20',
-                real_estate: '10',
+                real_estate: '15',
                 risk: '7',
                 stocks: '45'
             },
@@ -80,7 +80,7 @@ class IdealPortfolio extends React.Component {
                 bonds: '0',
                 cash: '0',
                 international_stocks: '25',
-                real_estate: '25',
+                real_estate: '20',
                 risk: '9',
                 stocks: '55'
             },
