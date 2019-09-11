@@ -237,41 +237,8 @@ class Transactions extends React.Component{
                         </ul>
                     </div>
                     <div className="portfolio-comparison">
-                        <div className="new-portfolio">
-                            <label>
-                                After:
-                            </label>
-                            <div>
-                                <br />
-                                <DonutChart
-                                    innerRadius={70}
-                                    outerRadius={100}
-                                    transition={true}
-                                    svgClass="example1"
-                                    pieClass="pie1"
-                                    displayTooltip={true}
-                                    strokeWidth={3}
-                                    data={data} />
-                            </div>
-                            <ul>
-                                <li>
-                                    Bonds: {portfolios[this.props.portfolio.risk].bonds / total * 100}% (${Number(portfolios[this.props.portfolio.risk].bonds)})
-                                </li>
-                                <li>
-                                    Gold: {portfolios[this.props.portfolio.risk].gold / total * 100}% (${Number(portfolios[this.props.portfolio.risk].gold)})
-                                </li>
-                                <li>
-                                    International Stocks: {portfolios[this.props.portfolio.risk].international_stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].international_stocks)})
-                                </li>
-                                <li>
-                                    Real Estate: {portfolios[this.props.portfolio.risk].real_estate / total * 100}% (${Number(portfolios[this.props.portfolio.risk].real_estate)})
-                                </li>
-                                <li>
-                                    Stocks: {portfolios[this.props.portfolio.risk].stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].stocks)})
-                                </li>
-                            </ul>
-                        </div>
-                        
+
+
                         <div className="old-portfolio">
                             <label>
                                 Before:
@@ -306,8 +273,44 @@ class Transactions extends React.Component{
                                 </li>
                             </ul>
                         </div>
+
+                        <div className="new-portfolio">
+                            <label>
+                                After:
+                            </label>
+                            <div>
+                                <br />
+                                <DonutChart
+                                    innerRadius={70}
+                                    outerRadius={100}
+                                    transition={true}
+                                    svgClass="example1"
+                                    pieClass="pie1"
+                                    displayTooltip={true}
+                                    strokeWidth={3}
+                                    data={data} />
+                            </div>
+                            <ul>
+                                <li>
+                                    Bonds: {portfolios[this.props.portfolio.risk].bonds / total * 100}% (${Number(portfolios[this.props.portfolio.risk].bonds).toFixed(2)})
+                                </li>
+                                <li>
+                                    Gold: {portfolios[this.props.portfolio.risk].gold / total * 100}% (${Number(portfolios[this.props.portfolio.risk].gold).toFixed(2)})
+                                </li>
+                                <li>
+                                    International Stocks: {portfolios[this.props.portfolio.risk].international_stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].international_stocks).toFixed(2)})
+                                </li>
+                                <li>
+                                    Real Estate: {portfolios[this.props.portfolio.risk].real_estate / total * 100}% (${Number(portfolios[this.props.portfolio.risk].real_estate).toFixed(2)})
+                                </li>
+                                <li>
+                                    Stocks: {portfolios[this.props.portfolio.risk].stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].stocks).toFixed(2)})
+                                </li>
+                            </ul>
+                        </div>
+                        
                     </div>
-                    <Link to='/'>Go Back to Home Page!</Link>
+                    <Link to='/'>Go back to home page!</Link>
                     <br/>
                 </div>
             </div>
