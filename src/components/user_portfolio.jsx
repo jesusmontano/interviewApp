@@ -7,8 +7,6 @@ class UserPortfolio extends React.Component {
         super(props);
 
         this.state = this.props.portfolio;
-
-        debugger;
     }
 
     render(){

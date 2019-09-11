@@ -230,11 +230,7 @@ class Transactions extends React.Component{
             },
         ]
 
-        debugger;
-
         const suggestions = this.generateTransactions(portfolios[this.props.portfolio.risk]);
-
-        debugger;
 
         return(
             <div className="transactions">
