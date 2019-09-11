@@ -45,28 +45,28 @@ class IdealPortfolio extends React.Component {
                 stocks: '20'
             },
             5: {
-                bonds: '',
-                gold: '',
-                international_stocks: '',
-                real_estate: '',
+                bonds: '40',
+                gold: '10',
+                international_stocks: '0',
+                real_estate: '20',
                 risk: '5',
-                stocks: '34'
+                stocks: '30'
             },
             6: {
-                bonds: '',
-                gold: '',
-                international_stocks: '',
-                real_estate: '',
+                bonds: '30',
+                gold: '15',
+                international_stocks: '5',
+                real_estate: '10',
                 risk: '6',
-                stocks: '34'
+                stocks: '40'
             },
             7: {
-                bonds: '',
-                gold: '',
-                international_stocks: '',
-                real_estate: '',
+                bonds: '15',
+                gold: '5',
+                international_stocks: '20',
+                real_estate: '10',
                 risk: '7',
-                stocks: '34'
+                stocks: '45'
             },
             8: {
                 bonds: '5',
