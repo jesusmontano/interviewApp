@@ -14,8 +14,8 @@ const Splash = () => {
                     Adjust Your Portfolio at JMCP
                 </div>
                 <br/>
-                <button>
-                    <Link to='/risk' style={{ textDecoration: 'none', color: 'black' }}>Get Started!</Link>
+                <button className="get-started-button">
+                    <Link to='/risk' style={{ textDecoration: 'none', color: 'white' }}>Get Started!</Link>
                 </button>
             </div>
         </div>

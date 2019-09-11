@@ -214,3 +214,11 @@
   font-weight: bolder;
   font-size: larger;
 }
+
+.get-started-button {
+  font-size: large;
+  border-radius: .75rem;
+  color: white;
+  background-color: #0077B5;
+  min-width: 40%;
+}
