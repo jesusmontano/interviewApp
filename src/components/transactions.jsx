@@ -310,7 +310,9 @@ class Transactions extends React.Component{
                         </div>
                         
                     </div>
-                    <Link to='/'>Go back to home page!</Link>
+                    <button>
+                        <Link to='/'>Go back to home page!</Link>
+                    </button>
                     <br/>
                 </div>
             </div>
