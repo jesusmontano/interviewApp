@@ -39,7 +39,7 @@ class PortfolioQuestionnaire extends React.Component {
         return(
             <div className="portfolio-questionnaire">
                 <div className="portfolio-questionnaire-div">
-                    <label>What does your portfolio look like?</label>
+                    <label className="portfolio-questionnaire-label">What does your portfolio look like?</label>
                     <br/>
                     <form className="portfolio-questionnaire-form" onSubmit={this.handleSubmit}>
                         <div className="category">

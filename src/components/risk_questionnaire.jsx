@@ -24,7 +24,7 @@ class RiskQuestionnaire extends React.Component {
         return(
             <div className="risk-questionnaire">
                 <div className="risk-questionnaire-div">
-                    <label>When it comes to investing, how much risk are you willing to take?</label>
+                    <label className="risk-questionnaire-label">When it comes to investing, how much risk are you willing to take?</label>
                     <br/>
                     <label>Enter a number on a scale of 1 to 10.</label>
                     <label>Larger numbers represent a higher willingness to take risk.</label>

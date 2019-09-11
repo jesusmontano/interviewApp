@@ -58,7 +58,7 @@ class UserPortfolio extends React.Component {
         return(
             <div className="user-portfolio">
                 <div className="user-portfolio-div">
-                    <label>This is your portfolio:</label>
+                    <label className="user-portfolio-label">This is your portfolio.</label>
                     <br/>
                     <div>
                         <DonutChart

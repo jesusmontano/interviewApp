@@ -222,3 +222,23 @@
   background-color: #0077B5;
   min-width: 40%;
 }
+
+.risk-questionnaire-label {
+  font-weight: bolder;
+}
+
+.ideal-portfolio-label {
+  font-weight: bolder;
+}
+
+.portfolio-questionnaire-label {
+  font-weight: bolder;
+}
+
+.user-portfolio-label {
+  font-weight: bolder;
+}
+
+.transactions-label {
+  font-weight: bolder;
+}

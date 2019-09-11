@@ -128,8 +128,9 @@ class IdealPortfolio extends React.Component {
         return(
             <div className="ideal-portfolio">
                 <div className="ideal-portfolio-div">
-                    This is the ideal portfolio based on your williningess to take risk.
-                    <br/>
+                    <label className="ideal-portfolio-label">
+                        This is the ideal portfolio based on your williningess to take risk.
+                    </label>
                     <div>
                         <br/>
                         <DonutChart

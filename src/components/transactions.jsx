@@ -35,7 +35,6 @@ class Transactions extends React.Component{
             let diff = Number(userPortfolio[category]) - Number(idealPortfolio[category]);
             if (diff > 0) {
                 userPortfolio[category] = Number(idealPortfolio[category]);
-                //or maybe here... actually i think this is good
                 userPortfolio.cash = Number(userPortfolio.cash) + diff;
                 if (category !== 'cash') {
                     if (category === 'real_estate') {
@@ -237,7 +236,7 @@ class Transactions extends React.Component{
                 <div className="transactions-div">
                     <div className="transactions-list">
                         <br/>
-                        <label>We suggest you make the following transactions to your portfolio.</label>
+                        <label className="transactions-label">We suggest you make the following transactions to your portfolio.</label>
                         <ul>
                             {suggestions.map((value, index) => {
                                 return <li key={index}>{value}</li>
