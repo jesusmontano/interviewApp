@@ -36,14 +36,14 @@ class Transactions extends React.Component{
             if (diff > 0) {
                 userPortfolio[category] = Number(idealPortfolio[category]);
                 //or maybe here... actually i think this is good
-                userPortfolio.stocks = Number(userPortfolio.stocks) + diff;
-                if (category !== 'stocks') {
+                userPortfolio.cash = Number(userPortfolio.cash) + diff;
+                if (category !== 'cash') {
                     if (category === 'real_estate') {
-                        surplus_transactions.push('Move $' + diff.toFixed(2) + ' from real estate to stocks.')  ////// to cash
+                        surplus_transactions.push('Move $' + diff.toFixed(2) + ' from real estate to cash.')  ////// to cash
                     } else if (category === 'international_stocks') {
-                        surplus_transactions.push('Move $' + diff.toFixed(2) + ' from international stocks to stocks.') //// to cash
+                        surplus_transactions.push('Move $' + diff.toFixed(2) + ' from international stocks to cash.') //// to cash
                     } else {
-                        surplus_transactions.push('Move $' + diff.toFixed(2) + ' from ' + category + ' to stocks.') ///// to cash
+                        surplus_transactions.push('Move $' + diff.toFixed(2) + ' from ' + category + ' to cash.') ///// to cash
                     }
                 }
             }
@@ -55,14 +55,14 @@ class Transactions extends React.Component{
             let diff = Number(idealPortfolio[category]) - Number(userPortfolio[category]);
             if (diff > 0) {
                 userPortfolio[category] = Number(idealPortfolio[category]);
-                userPortfolio.stocks = Number(userPortfolio.stocks) - diff;
-                if (category !== 'stocks') {
+                userPortfolio.cash = Number(userPortfolio.cash) - diff;
+                if (category !== 'cash') {
                     if (category === 'real_estate') {
-                        deficit_transctions.push('Move $' + diff.toFixed(2) + ' from stocks to real estate.'); //// from cash
+                        deficit_transctions.push('Move $' + diff.toFixed(2) + ' from cash to real estate.'); //// from cash
                     } else if (category === 'international_stocks') {
-                        deficit_transctions.push('Move $' + diff.toFixed(2) + ' from stocks to international stocks.'); //// from cash 
+                        deficit_transctions.push('Move $' + diff.toFixed(2) + ' from cash to international stocks.'); //// from cash 
                     } else {
-                        deficit_transctions.push('Move $' + diff.toFixed(2) + ' from stocks to ' + category + '.'); //// from cash
+                        deficit_transctions.push('Move $' + diff.toFixed(2) + ' from cash to ' + category + '.'); //// from cash
                     }
                 }
             }
