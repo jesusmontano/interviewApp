@@ -160,7 +160,7 @@ class IdealPortfolio extends React.Component {
                         </li>
                     </ul>
                     <button>
-                        <Link to="/createportfolio">Fix My Portfolio!</Link>
+                        <Link to="/createportfolio" style={{ textDecoration: 'none', color: 'black' }}>Fix My Portfolio!</Link>
                     </button>
                 </div>
             </div>

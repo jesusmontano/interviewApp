@@ -89,7 +89,7 @@ class UserPortfolio extends React.Component {
                         </li>
                     </ul>
                     <button>
-                        <Link to="/fix">Fix My Portfolio!</Link>
+                        <Link to="/fix" style={{ textDecoration: 'none', color: 'black' }}>Fix My Portfolio!</Link>
                     </button>
                 </div>
             </div>

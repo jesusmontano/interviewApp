@@ -11,7 +11,7 @@ const Splash = () => {
                 </div>
                 <br/>
                 <button>
-                    <Link to='/risk'>Get Started</Link>
+                    <Link to='/risk' style={{ textDecoration: 'none', color: 'black' }}>Get Started</Link>
                 </button>
             </div>
         </div>

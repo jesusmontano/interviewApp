@@ -4,7 +4,7 @@ const Header = () => {
 
     return (
         <div className="header">
-            Jesús Montano Capital Advisors
+            <a style={{ textDecoration: 'none', color: 'white' }} href="/">Jesus Montano Capital Advisors</a>
         </div>
     )
 }
