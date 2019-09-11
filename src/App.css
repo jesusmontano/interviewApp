@@ -208,3 +208,9 @@
   display: flex;
   flex-direction: column;
 }
+
+.tagline {
+  color: #0077B5;
+  font-weight: bolder;
+  font-size: larger;
+}
