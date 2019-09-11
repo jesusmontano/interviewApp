@@ -292,19 +292,19 @@ class Transactions extends React.Component{
                             </div>
                             <ul>
                                 <li>
-                                    Bonds: {portfolios[this.props.portfolio.risk].bonds / total * 100}% (${Number(portfolios[this.props.portfolio.risk].bonds).toFixed(2)})
+                                    Bonds: {Math.trunc(portfolios[this.props.portfolio.risk].bonds / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].bonds).toFixed(2)})
                                 </li>
                                 <li>
-                                    Gold: {portfolios[this.props.portfolio.risk].gold / total * 100}% (${Number(portfolios[this.props.portfolio.risk].gold).toFixed(2)})
+                                    Gold: {Math.trunc(portfolios[this.props.portfolio.risk].gold / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].gold).toFixed(2)})
                                 </li>
                                 <li>
-                                    International Stocks: {portfolios[this.props.portfolio.risk].international_stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].international_stocks).toFixed(2)})
+                                    International Stocks: {Math.trunc(portfolios[this.props.portfolio.risk].international_stocks / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].international_stocks).toFixed(2)})
                                 </li>
                                 <li>
-                                    Real Estate: {portfolios[this.props.portfolio.risk].real_estate / total * 100}% (${Number(portfolios[this.props.portfolio.risk].real_estate).toFixed(2)})
+                                    Real Estate: {Math.trunc(portfolios[this.props.portfolio.risk].real_estate / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].real_estate).toFixed(2)})
                                 </li>
                                 <li>
-                                    Stocks: {portfolios[this.props.portfolio.risk].stocks / total * 100}% (${Number(portfolios[this.props.portfolio.risk].stocks).toFixed(2)})
+                                    Stocks: {Math.trunc(portfolios[this.props.portfolio.risk].stocks / total * 100)}% (${Number(portfolios[this.props.portfolio.risk].stocks).toFixed(2)})
                                 </li>
                             </ul>
                         </div>
