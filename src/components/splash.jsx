@@ -11,7 +11,7 @@ const Splash = () => {
                 </div>
                 <br/>
                 <div>
-                    Adjust Your Portfolio at JMCP
+                    Adjust Your Portfolio at JMCA
                 </div>
                 <br/>
                 <button className="submit-button">
